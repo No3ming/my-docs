@@ -1,0 +1,23 @@
+{
+  "name": "my-docs",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "docs:dev": "vuepress-vite dev docs",
+    "docs:build": "vuepress-vite build docs"
+  },
+  "devDependencies": {
+    "@vuepress/plugin-docsearch": "^2.0.0-alpha.1",
+    "@vuepress/shared-utils": "^1.8.2",
+    "less": "^4.1.1",
+    "stylus": "^0.54.8",
+    "vuepress-vite": "^2.0.0-beta.18"
+  },
+  "dependencies": {
+    "@vue/component-compiler-utils": "^3.2.1",
+    "@vuepress/plugin-search": "^1.8.2",
+    "dayjs": "^1.10.5",
+    "lodash": "^4.17.21"
+  }
+}
