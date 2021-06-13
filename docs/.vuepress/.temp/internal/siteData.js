@@ -1,5 +1,5 @@
 export const siteData = {
-  "base": "/",
+  "base": "",
   "lang": "zh-CN",
   "title": "小明的博客！",
   "description": "做人一定要骚",
