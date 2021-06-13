@@ -1,6 +1,4 @@
-import {path} from '@vuepress/shared-utils'
 
-console.log(process.env.NODE_ENV)
 module.exports = {
   base: process.env.NODE_ENV === 'development' ? '': '/my-docs/',
   lang: 'zh-CN',

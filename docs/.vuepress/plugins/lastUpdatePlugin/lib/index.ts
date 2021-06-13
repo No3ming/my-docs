@@ -1,5 +1,5 @@
 const execa = require("execa");
-
+const path = require('path')
 let allMenu = []
 let menu = []
 
@@ -19,7 +19,7 @@ const getCreatedTime = async (filePath, cwd) => {
   return Number.parseInt(stdout, 10) * 1000;
 };
 
-const handlerFile = async (page, cwd) => {
+const handlerFile = async (page, cwd, app) => {
   if (page.filePathRelative === 'readme.md') {
     allMenu.splice(0, allMenu.length)
     menu.splice(0, allMenu.length)
@@ -27,7 +27,7 @@ const handlerFile = async (page, cwd) => {
   if (page.filePathRelative && page.filePathRelative !== 'readme.md') {
     const p = {
       title: page.title,
-      path: page.path,
+      path: path.resolve(app.options.base, page.path),
       createDate: await getCreatedTime(page.filePathRelative, cwd)
     }
     allMenu.push(p)
@@ -48,12 +48,11 @@ const lastUpdatePlugin =  (options, app) => {
       }
     },
     async onInitialized (app) {
-      // console.log(app.pages)
       // app.siteData.allMenu = allMenu
       for (let i =0; i< app.pages.length; i++) {
-        await handlerFile(app.pages[i], cwd)
+        await handlerFile(app.pages[i], cwd, app)
       }
-      console.log(menu)
+
       app.siteData.last10 = menu
     }
   }

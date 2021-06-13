@@ -8,7 +8,7 @@ export const siteData = {
   "last10": [
     {
       "title": "我的js",
-      "path": "/javascript/",
+      "path": "/javascript",
       "createDate": 1623588361000
     },
     {
