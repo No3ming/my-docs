@@ -11,7 +11,7 @@ export const data = {
   "headers": [],
   "filePathRelative": "javascript/test2.md",
   "git": {
-    "updatedTime": 1623586476000
+    "updatedTime": 1623588361000
   }
 }
 

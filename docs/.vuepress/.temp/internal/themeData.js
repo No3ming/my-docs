@@ -1,5 +1,5 @@
 export const themeData = {
-  "repo": "https://gitee.com/lidomi/my-docs.git",
+  "repo": "https://github.com/No3ming/my-docs.git",
   "logo": "https://vuejs.org/images/logo.png",
   "navbar": [
     {
