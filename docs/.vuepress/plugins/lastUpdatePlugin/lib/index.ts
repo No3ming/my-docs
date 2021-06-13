@@ -1,14 +1,14 @@
 const execa = require("execa");
 const path = require('path')
-let allMenu = []
-let menu = []
+let allPost = []
+let lastPost10 = []
 
 const handlerMenu = (page) => {
-  const index = menu.findIndex(it => it.createDate < page.createDate)
+  const index = lastPost10.findIndex(it => it.createDate < page.createDate)
   if (index >= 0) {
-    menu.splice(index, menu.length >= 10 ? 1 : 0)
+    lastPost10.splice(index, lastPost10.length >= 10 ? 1 : 0)
   } else {
-    menu.push(page)
+    lastPost10.push(page)
   }
 }
 
@@ -21,16 +21,16 @@ const getCreatedTime = async (filePath, cwd) => {
 
 const handlerFile = async (page, cwd, app) => {
   if (page.filePathRelative === 'readme.md') {
-    allMenu.splice(0, allMenu.length)
-    menu.splice(0, allMenu.length)
+    allPost.splice(0, allPost.length)
+    lastPost10.splice(0, allPost.length)
   }
-  if (page.filePathRelative && page.filePathRelative !== 'readme.md') {
+  if (page.filePathRelative && page.filePathRelative !== 'readme.md' && page.frontmatter.isShowList !== false) {
     const p = {
       title: page.title,
       path: path.resolve(app.options.base + page.path),
       createDate: await getCreatedTime(page.filePathRelative, cwd)
     }
-    allMenu.push(p)
+    allPost.push(p)
     handlerMenu(p)
   }
 }
@@ -41,19 +41,20 @@ const lastUpdatePlugin =  (options, app) => {
     name: 'lastUpdatePlugin',
     extendsPageData: async (page) => {
       // await handlerFile(page, cwd)
-      // console.log(allMenu)
+      // console.log(allPost)
       return {
-        // allMenu,
-        // menu
+        // allPost,
+        // lastPost10
       }
     },
     async onInitialized (app) {
-      // app.siteData.allMenu = allMenu
+      // app.siteData.allPost = allPost
       for (let i =0; i< app.pages.length; i++) {
         await handlerFile(app.pages[i], cwd, app)
       }
       // console.log(app)
-      app.siteData.last10 = menu
+      app.siteData.last10 = lastPost10
+      app.siteData.allPost = allPost.sort((a, b) => a.createDate-b.createDate)
     }
   }
 }
