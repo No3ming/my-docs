@@ -2,7 +2,7 @@ import {path} from '@vuepress/shared-utils'
 
 console.log(process.env.NODE_ENV)
 module.exports = {
-  base: process.env.NODE_ENV === 'development' ? '': 'my-docs',
+  base: process.env.NODE_ENV === 'development' ? '': 'my-docs/',
   lang: 'zh-CN',
   title: '小明的博客！',
   description: '做人一定要骚',
