@@ -27,7 +27,7 @@ const handlerFile = async (page, cwd, app) => {
   if (page.filePathRelative && page.filePathRelative !== 'readme.md') {
     const p = {
       title: page.title,
-      path: path.resolve(app.options.base, page.path),
+      path: path.resolve(app.options.base + page.path),
       createDate: await getCreatedTime(page.filePathRelative, cwd)
     }
     allMenu.push(p)
@@ -52,7 +52,7 @@ const lastUpdatePlugin =  (options, app) => {
       for (let i =0; i< app.pages.length; i++) {
         await handlerFile(app.pages[i], cwd, app)
       }
-
+      // console.log(app)
       app.siteData.last10 = menu
     }
   }
