@@ -31,7 +31,7 @@ declare module "jquery" {}
 - string 字符串
 - number 数值
 - boolean 布尔
-- string[], number[], Array<number> 固定类型数组
+- string[], number[], Array\<number> 固定类型数组
 - [string, number] 元组, 固定下标类型的数组，不同类型的数组
 - enum 枚举, 给一组数值一个友好的标志: enum Color {red, blue = 3} // Color.red === 0 ; Color.blue === 3
 - any 不确定类型
