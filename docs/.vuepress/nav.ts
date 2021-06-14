@@ -1,4 +1,4 @@
 module.exports = [
   { text: '首页', link: '/' },
-  { text: '文章', link: '/list/' },
+  { text: '所有文章', link: '/list/' },
 ]

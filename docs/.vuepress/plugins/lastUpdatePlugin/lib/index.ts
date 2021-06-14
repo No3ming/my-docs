@@ -6,7 +6,7 @@ let lastPost10 = []
 const handlerMenu = (page) => {
   const index = lastPost10.findIndex(it => it.createDate < page.createDate)
   if (index >= 0) {
-    lastPost10.splice(index, lastPost10.length >= 10 ? 1 : 0)
+    lastPost10.splice(index, lastPost10.length >= 10 ? 1 : 0, page)
   } else {
     lastPost10.push(page)
   }
@@ -54,7 +54,7 @@ const lastUpdatePlugin =  (options, app) => {
       }
       // console.log(app)
       app.siteData.last10 = lastPost10
-      app.siteData.allPost = allPost.sort((a, b) => a.createDate-b.createDate)
+      app.siteData.allPost = allPost.sort((a, b) =>  b.createDate - a.createDate)
     }
   }
 }
