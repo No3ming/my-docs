@@ -3,6 +3,7 @@
 ## Partial
 
 源码
+
 ```ts
 type Partial<T> = {
     [P in keyof T]?: T[P]
@@ -12,6 +13,7 @@ type Partial<T> = {
 作用: 生成一个类型，该类型将T的属性全部变为可选
 
 例子
+
 ```ts
 type Foo = {
     name: string
