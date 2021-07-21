@@ -11,7 +11,7 @@ module.exports = {
   ],
   themeConfig: {
     repo: 'https://github.com/No3ming/my-docs',
-    logo: 'https://vuejs.org/images/logo.png',
+    logo: '/logo.svg',
     navbar: require('./nav'),
     lastUpdated: true,
     docsDir: 'docs',
