@@ -1,0 +1,1 @@
+const t={key:"v-fdeb98fc",path:"/javascript/test2.html",title:"我的js测试2",lang:"zh-CN",frontmatter:{title:"我的js测试2",description:"页面的描述"},excerpt:"",headers:[],filePathRelative:"javascript/test2.md",git:{updatedTime:1623588361e3}};export{t as data};

@@ -1,0 +1,1 @@
+import{r as a,o as s,c as r,a as e,F as o,b as t}from"./app.dd1f0c8e.js";const n={},c=e("h2",{id:"所有的文章"},[e("a",{class:"header-anchor",href:"#所有的文章"},"#"),t(" 所有的文章")],-1);n.render=function(t,n){const d=a("AllPostList");return s(),r(o,null,[c,e(d)],64)};export default n;

@@ -1,0 +1,1 @@
+const e={key:"v-64fe3a7e",path:"/collect/%E4%B8%80%E4%BA%9B%E7%89%9B%E9%80%BC%E7%9A%84%E6%94%B6%E8%97%8F.html",title:"一些牛逼的收藏",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[],filePathRelative:"collect/一些牛逼的收藏.md",git:{updatedTime:1626399531e3}};export{e as data};

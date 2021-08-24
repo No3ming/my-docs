@@ -1,0 +1,1 @@
+const t={key:"v-671509b8",path:"/offer/typescript%E9%9D%A2%E8%AF%95%E5%86%85%E5%AE%B9.html",title:"typescript 面试内容",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[],filePathRelative:"offer/typescript面试内容.md",git:{updatedTime:1623692937e3}};export{t as data};

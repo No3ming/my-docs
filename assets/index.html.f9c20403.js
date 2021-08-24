@@ -1,0 +1,1 @@
+const e={key:"v-8daa1a0e",path:"/",title:"首页",lang:"zh-CN",frontmatter:{title:"首页",description:"小明的博客 明明的博客 No3ming",home:!0,isShowList:!1},excerpt:"",headers:[{level:2,title:"最新的文章",slug:"最新的文章",children:[]}],filePathRelative:"readme.md",git:{updatedTime:1623597801e3}};export{e as data};

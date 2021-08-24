@@ -1,0 +1,1 @@
+const e={key:"v-e02a086e",path:"/javascript/",title:"我的js",lang:"zh-CN",frontmatter:{description:"页面的描述",home:!1},excerpt:"",headers:[],filePathRelative:"javascript/index.md",git:{updatedTime:1623597801e3}};export{e as data};

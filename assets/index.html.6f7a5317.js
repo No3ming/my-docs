@@ -1,0 +1,1 @@
+const e={key:"v-14e663f8",path:"/list/",title:"所有的文章",lang:"zh-CN",frontmatter:{title:"所有的文章",description:"页面的描述",editLink:!1,sidebar:!1,isShowList:!1,lastUpdated:!1},excerpt:"",headers:[{level:2,title:"所有的文章",slug:"所有的文章",children:[]}],filePathRelative:"list/index.md",git:{updatedTime:1623691568e3}};export{e as data};

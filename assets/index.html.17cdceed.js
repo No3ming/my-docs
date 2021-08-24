@@ -1,0 +1,1 @@
+import{r as a,o as s,c as r,a as e,F as t,b as n}from"./app.dd1f0c8e.js";const o={},c=e("h2",{id:"最新的文章"},[e("a",{class:"header-anchor",href:"#最新的文章"},"#"),n(" 最新的文章")],-1);o.render=function(n,o){const d=a("LastUpdateList");return s(),r(t,null,[c,e(d)],64)};export default o;
