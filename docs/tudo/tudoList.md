@@ -8,4 +8,5 @@
   },
   ```
   
-- 
+- 学习 cli 控制台输入参数 [inquirer](https://www.npmjs.com/package/inquirer)
+  
